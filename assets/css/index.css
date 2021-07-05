@@ -1,0 +1,53 @@
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form-section input {
+    padding: 0.4rem;
+    border: 1px solid rgb(189, 189, 189);
+}
+
+.c-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr));
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.c-cards__card {
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.103);
+    padding: 1rem;
+}
+
+.c-cards__card h3 {
+    margin-top: 0;
+}
+
+.c-btn-div {
+    display: flex;
+    margin: 2rem;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.c-btn {
+    padding: 0.4rem 0.8rem;
+    min-width: 4rem;
+    background-color: transparent;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 150ms;
+    display: block;
+}
+
+.c-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.c-form {
+    margin: 0 auto;
+    max-width: 300px;
+}

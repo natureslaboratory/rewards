@@ -1,0 +1,11 @@
+perch/*
+access.log
+error.log
+!/perch/templates
+!/perch/templates/*
+!/perch/addons
+/perch/addons/*
+!/perch/addons/apps
+/perch/addons/apps/*
+!/perch/addons/apps/nl_rewards
+!/perch/addons/apps/nl_rewards/*

@@ -1,0 +1,74 @@
+<perch:form 
+    <perch:if id="formType" value="create">
+        id="create_card" 
+    </perch:if>
+    <perch:if id="formType" value="edit">
+        id="edit_card" 
+    </perch:if>
+    method="post" 
+    app="nl_rewards" 
+    type="default" 
+    action=""
+>
+    <div style="
+    margin: 0 auto;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    ">
+        <div class="form-section">
+            <label>Card Number</label>
+            <perch:input type="text" id="cardNumber" />
+        </div>
+        <div class="form-section">
+            <label>First Name</label>
+            <perch:input type="text" id="memberFirstName" />
+        </div>
+        <div class="form-section">
+            <label>Last Name</label>
+            <perch:input type="text" id="memberLastName" />
+        </div>
+        <div class="form-section">
+            <label>Phone</label>
+            <perch:input type="text" id="memberPhone" />
+        </div>
+        <div class="form-section">
+            <label>Email</label>
+            <perch:input type="text" id="memberEmail" />
+        </div>
+        <div class="form-section">
+            <label>Address</label>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem">
+                <perch:input type="text" id="addressHouse" placeholder="House Name/Number"/>
+                <perch:input type="text" id="addressStreet" placeholder="Street" />
+                <perch:input type="text" id="addressCity" placeholder="Town/City" />
+                <perch:input type="text" id="addressCounty" placeholder="County" />
+                <perch:input type="text" id="addressPostcode" placeholder="Postcode" />
+            </div>
+        </div>
+        <perch:if exists="loyaltyCardID">
+            <perch:input type="hidden" id="loyaltyCardID" value="<perch:rewards id="loyaltyCardID" />" />
+        </perch:if>
+        <perch:if exists="addressID">
+            <perch:input type="hidden" id="addressID" value="<perch:rewards id="addressID" />" />
+        </perch:if>
+        <perch:if exists="cardBalance">
+            <div class="form-section">
+                <label>Card Balance</label>
+                <perch:input type="text" id="cardBalance" />
+            </div>
+        </perch:if>
+        <perch:input 
+            type="submit" 
+            <perch:if id="formType" value="create">
+                value="Create" 
+                id="createCard" 
+            </perch:if>
+            <perch:if id="formType" value="edit">
+                value="Update" 
+                id="updateCard" 
+            </perch:if>
+        />
+    </div>
+</perch:form>
